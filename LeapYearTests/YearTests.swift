@@ -16,4 +16,11 @@ class YearTests: XCTestCase {
         
         XCTAssertFalse(year.isLeapYear())
     }
+    
+    func test_ReturnFalseForLeapYear_WhenAnYearIsDivisibleBy100ButNotBy400() {
+        let anYearDivisibleBy100ButNotBy400 = 1700
+        let year = Year.init(anYearDivisibleBy100ButNotBy400)
+        
+        XCTAssertFalse(year.isLeapYear())
+    }
 }
