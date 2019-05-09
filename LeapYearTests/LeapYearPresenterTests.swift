@@ -2,11 +2,16 @@ import XCTest
 @testable import LeapYear
 
 class LeapYearPresenterTests: XCTestCase {
+    private var leapYearPresenter:LeapYearPresenter!
+    private var leapYearView:SpyLeapYearView!
+    
+    override func setUp() {
+        leapYearView = SpyLeapYearView()
+        leapYearPresenter = LeapYearPresenter(leapYearView: leapYearView)
+    }
     
     func test_showYearLessThanGregorianCalendarYearMessage_whenUserEntersAnYearLessThanGregorianCalendarYear() {
         let yearLessThanGregorianCalendarYear = "1580"
-        let leapYearView = SpyLeapYearView()
-        let leapYearPresenter = LeapYearPresenter(leapYearView: leapYearView)
         
         leapYearPresenter.validate(anYear:yearLessThanGregorianCalendarYear)
         
@@ -15,8 +20,6 @@ class LeapYearPresenterTests: XCTestCase {
     
     func test_ShowLeapYearMessage_WhenUserEntersAValidLeapYear() {
         let validLeapYear = "2016"
-        let leapYearView = SpyLeapYearView()
-        let leapYearPresenter = LeapYearPresenter(leapYearView: leapYearView)
         
         leapYearPresenter.validate(anYear:validLeapYear)
         
@@ -25,8 +28,6 @@ class LeapYearPresenterTests: XCTestCase {
     
     func test_ShowNonLeapYearMessage_WhenUserEntersANonLeapYear() {
         let nonLeapYear = "2017"
-        let leapYearView = SpyLeapYearView()
-        let leapYearPresenter = LeapYearPresenter(leapYearView: leapYearView)
         
         leapYearPresenter.validate(anYear:nonLeapYear)
         
