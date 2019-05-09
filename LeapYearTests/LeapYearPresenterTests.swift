@@ -39,6 +39,13 @@ class LeapYearPresenterTests: XCTestCase {
         
         XCTAssertTrue(leapYearView.isInvalidYearMessageDisplayed)
     }
+    
+    func test_ShowInvalidYearMessage_WhenNilIsReturnedWhileConvertingFromStringToInt() {
+        
+        leapYearPresenter.validate(anYear: "ABCDEFG")
+        
+        XCTAssertTrue(leapYearView.isInvalidYearMessageDisplayed)
+    }
 }
 
 class SpyLeapYearView: LeapYearView {
