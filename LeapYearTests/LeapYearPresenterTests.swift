@@ -22,17 +22,32 @@ class LeapYearPresenterTests: XCTestCase {
         
         XCTAssertTrue(leapYearView.isLeapYearMessageDisplayed)
     }
+    
+    func test_ShowNonLeapYearMessage_WhenUserEntersANonLeapYear() {
+        let nonLeapYear = "2017"
+        let leapYearView = SpyLeapYearView()
+        let leapYearPresenter = LeapYearPresenter(leapYearView: leapYearView)
+        
+        leapYearPresenter.validate(anYear:nonLeapYear)
+        
+        XCTAssertTrue(leapYearView.isNonLeapYearMessageDisplayed)
+    }
 }
 
 class SpyLeapYearView: LeapYearView {
     fileprivate var isYearLessThanGregorianCalendarMessageDisplayed = false
     fileprivate var isLeapYearMessageDisplayed = false
-
+    fileprivate var isNonLeapYearMessageDisplayed = false
+    
     func showYearLessThanGregorianCalendarYearMessage(message:String) {
         isYearLessThanGregorianCalendarMessageDisplayed = true
     }
     
     func showLeapYearMessage(message: String) {
         isLeapYearMessageDisplayed = true
+    }
+    
+    func showNonLeapYearMessage(message: String) {
+        isNonLeapYearMessageDisplayed = true
     }
 }
