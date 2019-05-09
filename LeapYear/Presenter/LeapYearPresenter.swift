@@ -2,6 +2,7 @@ class LeapYearPresenter {
     private let YEAR_LESS_THAN_GREGORIAN_CALENDAR_YEAR = "Gregorian Calendar was adopted in the year 1582. Please enter an year greater than 1581 to verify an year is leap year or not"
     private let LEAP_YEAR_MESSAGE = " is a Leap Year!"
     private let NON_LEAP_YEAR_MESSAGE = " is not a Leap Year!"
+    private let INVALID_YEAR_MESSAGE = "Please enter a valid year"
     
     private let leapYearView:LeapYearView
     
@@ -9,8 +10,9 @@ class LeapYearPresenter {
         self.leapYearView = leapYearView
     }
     
-    func validate(anYear:String) {
-        guard let year = Int(anYear) else {
+    func validate(anYear:String?) {
+        guard let yearInString = anYear, let year = Int(yearInString) else {
+            leapYearView.showInvalidYearMessage(message: INVALID_YEAR_MESSAGE)
             return
         }
         let calendarYear = Year.init(year)
