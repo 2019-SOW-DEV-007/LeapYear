@@ -12,7 +12,6 @@
 		B5DB743B2283864200D079AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5DB74392283864200D079AD /* Main.storyboard */; };
 		B5DB743D2283864600D079AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5DB743C2283864600D079AD /* Assets.xcassets */; };
 		B5DB74402283864600D079AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5DB743E2283864600D079AD /* LaunchScreen.storyboard */; };
-		B5DB744B2283864600D079AD /* LeapYearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DB744A2283864600D079AD /* LeapYearTests.swift */; };
 		B5DB74562283864600D079AD /* LeapYearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DB74552283864600D079AD /* LeapYearUITests.swift */; };
 		B5DB74642283976000D079AD /* YearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DB74632283976000D079AD /* YearTests.swift */; };
 		B5DB7467228398DC00D079AD /* Year.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DB7466228398DC00D079AD /* Year.swift */; };
@@ -47,7 +46,6 @@
 		B5DB743F2283864600D079AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5DB74412283864600D079AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5DB74462283864600D079AD /* LeapYearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeapYearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5DB744A2283864600D079AD /* LeapYearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeapYearTests.swift; sourceTree = "<group>"; };
 		B5DB744C2283864600D079AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5DB74512283864600D079AD /* LeapYearUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeapYearUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5DB74552283864600D079AD /* LeapYearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeapYearUITests.swift; sourceTree = "<group>"; };
@@ -108,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				B5DB74352283864200D079AD /* AppDelegate.swift */,
+				B5DB74732283F14600D079AD /* Model */,
 				B5DB74702283BAC600D079AD /* View */,
 				B5DB746B2283B8A300D079AD /* Presenter */,
 				B5DB74682283B86800D079AD /* ViewController */,
@@ -115,7 +114,6 @@
 				B5DB743C2283864600D079AD /* Assets.xcassets */,
 				B5DB743E2283864600D079AD /* LaunchScreen.storyboard */,
 				B5DB74412283864600D079AD /* Info.plist */,
-				B5DB7466228398DC00D079AD /* Year.swift */,
 			);
 			path = LeapYear;
 			sourceTree = "<group>";
@@ -123,7 +121,6 @@
 		B5DB74492283864600D079AD /* LeapYearTests */ = {
 			isa = PBXGroup;
 			children = (
-				B5DB744A2283864600D079AD /* LeapYearTests.swift */,
 				B5DB744C2283864600D079AD /* Info.plist */,
 				B5DB74632283976000D079AD /* YearTests.swift */,
 				B5DB746C2283B91300D079AD /* LeapYearPresenterTests.swift */,
@@ -162,6 +159,14 @@
 				B5DB74712283BAE600D079AD /* LeapYearView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B5DB74732283F14600D079AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5DB7466228398DC00D079AD /* Year.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,7 +313,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5DB74642283976000D079AD /* YearTests.swift in Sources */,
-				B5DB744B2283864600D079AD /* LeapYearTests.swift in Sources */,
 				B5DB746D2283B91300D079AD /* LeapYearPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
