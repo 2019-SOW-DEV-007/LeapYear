@@ -1,5 +1,6 @@
 class LeapYearPresenter {
     private let YEAR_LESS_THAN_GREGORIAN_CALENDAR_YEAR = "Gregorian Calendar was adopted in the year 1582. Please enter an year greater than 1581 to verify an year is leap year or not"
+    private let LEAP_YEAR_MESSAGE = " is a Leap Year!"
     
     private let leapYearView:LeapYearView
     
@@ -14,6 +15,11 @@ class LeapYearPresenter {
         let calendarYear = Year.init(year)
         if !calendarYear.isYearGreaterThanOrEqualToGregorianCalendarYear() {
             leapYearView.showYearLessThanGregorianCalendarYearMessage(message: YEAR_LESS_THAN_GREGORIAN_CALENDAR_YEAR)
+            return
+        }
+        
+        if calendarYear.isLeapYear() {
+            leapYearView.showLeapYearMessage(message: "\(year)" + LEAP_YEAR_MESSAGE)
         }
     }
 }
