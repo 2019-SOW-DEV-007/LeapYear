@@ -65,6 +65,14 @@ class LeapYearPresenterTests: XCTestCase {
         
         XCTAssertTrue(leapYearView.isEnableSubmitButtonCalled)
     }
+    
+    func test_DisableSubmitButton_WhenUserDoesnotEnterAnyCharacterInTextField() {
+        let emptyCharacter = ""
+        
+        leapYearPresenter.toggleSubmitButton(year: emptyCharacter)
+        
+        XCTAssertTrue(leapYearView.isDisableSubmitButtonCalled)
+    }
 }
 
 class SpyLeapYearView: LeapYearView {
@@ -73,6 +81,7 @@ class SpyLeapYearView: LeapYearView {
     fileprivate var isNonLeapYearMessageDisplayed = false
     fileprivate var isInvalidYearMessageDisplayed = false
     fileprivate var isEnableSubmitButtonCalled = false
+    fileprivate var isDisableSubmitButtonCalled = false
     
     func showYearLessThanGregorianCalendarYearMessage(message:String) {
         isYearLessThanGregorianCalendarMessageDisplayed = true
@@ -92,5 +101,9 @@ class SpyLeapYearView: LeapYearView {
     
     func enableSubmitButton() {
         isEnableSubmitButtonCalled = true
+    }
+    
+    func disableSubmitButton() {
+        isDisableSubmitButtonCalled = true
     }
 }

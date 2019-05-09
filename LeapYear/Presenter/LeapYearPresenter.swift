@@ -17,6 +17,9 @@ class LeapYearPresenter {
         if year.count > 0 {
             leapYearView.enableSubmitButton()
         }
+        else {
+            leapYearView.disableSubmitButton()
+        }
     }
     
     func validate(anYear:String?) {

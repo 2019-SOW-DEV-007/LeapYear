@@ -2,8 +2,6 @@ import UIKit
 
 class LeapYearViewController: UIViewController, UITextFieldDelegate, LeapYearView {
     
-    
-
     @IBOutlet weak private var yearTextField: UITextField!
     @IBOutlet weak private var submitButton: UIButton!
     
@@ -37,6 +35,14 @@ class LeapYearViewController: UIViewController, UITextFieldDelegate, LeapYearVie
     }
     
     func showInvalidYearMessage(message: String) {
+        
+    }
+    
+    func enableSubmitButton() {
+        
+    }
+    
+    func disableSubmitButton() {
         
     }
 }

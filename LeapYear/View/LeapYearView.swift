@@ -4,4 +4,5 @@ protocol LeapYearView {
     func showNonLeapYearMessage(message:String)
     func showInvalidYearMessage(message:String)
     func enableSubmitButton()
+    func disableSubmitButton()
 }
