@@ -6,13 +6,21 @@ class Year {
     }
     
     func isLeapYear() -> Bool {
-        if year % 4 == 0 && year % 100 != 0 {
-            return true
-        }
-        
-        if year % 400 == 0 {
+        if anYearDivisibleBy400() || anYearDivisibleBy4ButNotBy100() {
             return true
         }
         return false
+    }
+    
+    private func anYearDivisibleBy400() -> Bool {
+        return yearDivisibleBy(400)
+    }
+    
+    private func anYearDivisibleBy4ButNotBy100() -> Bool {
+        return yearDivisibleBy(4) && !yearDivisibleBy(100)
+    }
+    
+    private func yearDivisibleBy(_ number:Int) -> Bool {
+        return year % number == 0
     }
 }
