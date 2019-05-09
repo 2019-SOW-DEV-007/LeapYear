@@ -95,7 +95,7 @@ class SpyLeapYearView: LeapYearView {
         isNonLeapYearMessageDisplayed = true
     }
     
-    func showInvalidYearMessage(message: String) {
+    func showInvalidYearMessage(invalidYear: String) {
         isInvalidYearMessageDisplayed = true
     }
     

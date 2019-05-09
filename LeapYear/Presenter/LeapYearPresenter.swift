@@ -24,7 +24,7 @@ class LeapYearPresenter {
     
     func validate(anYear:String?) {
         guard let yearInString = anYear, let year = Int(yearInString) else {
-            leapYearView.showInvalidYearMessage(message: INVALID_YEAR_MESSAGE)
+            leapYearView.showInvalidYearMessage(invalidYear: INVALID_YEAR_MESSAGE)
             return
         }
         let calendarYear = Year.init(year)
