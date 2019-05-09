@@ -21,8 +21,7 @@ This is an iOS Application developed with XCode IDE 10.1 and written in Swift pr
 * All years not divisible by 4 are NOT leap years.
 
 ### Running the test
-* To run Unit Test, select the LeapYearKataTests target, press command + u to run the test cases or Go to Product menu in Xcode and Choose Test option to exeute the test cases
-* To run the UI Test, select the LeapYearKataUITests target, press command + u to run the test cases or Go to Product menu in Xcode and Choose Test option to exeute the ui test cases
+* To run Unit Test and UI Test, select the LeapYear target, press command + u to run the test cases or Go to Product menu in Xcode and Choose Test option to exeute the test cases
 
 ### Design Pattern used to develop this App
 * This application is developed with MVP pattern
