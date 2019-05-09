@@ -38,6 +38,14 @@ class YearTests: XCTestCase {
         XCTAssertFalse(year.isLeapYear())
     }
     
+    func test_ReturnTrue_WhenAnYearIsGreaterThanGregorianCalendarStartingYear1582() {
+        let anYearGreaterThanGregorianCalendarStartYear = 1583
+        let year = createAnYear(anYearGreaterThanGregorianCalendarStartYear)
+        
+        XCTAssertTrue(year.isYearGreaterThanOrEqualToGregorianCalendarYear())
+    }
+    
+    
     private func createAnYear(_ year: Int) -> Year {
         return Year.init(year)
     }

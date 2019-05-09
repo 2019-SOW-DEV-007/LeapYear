@@ -1,8 +1,13 @@
 class Year {
     private let year:Int
+    private let GREGORIAN_CALENDAR_START_YEAR = 1582
     
     init(_ year:Int) {
         self.year = year
+    }
+    
+    func isYearGreaterThanOrEqualToGregorianCalendarYear() -> Bool {
+        return year >= GREGORIAN_CALENDAR_START_YEAR
     }
     
     func isLeapYear() -> Bool {
