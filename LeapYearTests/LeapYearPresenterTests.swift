@@ -57,6 +57,14 @@ class LeapYearPresenterTests: XCTestCase {
         let invalidNumericCharacter = "A"
         XCTAssertFalse(leapYearPresenter.isValidNumber(number:invalidNumericCharacter))
     }
+    
+    func test_EnableSubmitButton_WhenUserEntersAtleastOneCharacterInTextField() {
+        let oneCharacter = "1"
+        
+        leapYearPresenter.toggleSubmitButton(year: oneCharacter)
+        
+        XCTAssertTrue(leapYearView.isEnableSubmitButtonCalled)
+    }
 }
 
 class SpyLeapYearView: LeapYearView {
@@ -64,6 +72,7 @@ class SpyLeapYearView: LeapYearView {
     fileprivate var isLeapYearMessageDisplayed = false
     fileprivate var isNonLeapYearMessageDisplayed = false
     fileprivate var isInvalidYearMessageDisplayed = false
+    fileprivate var isEnableSubmitButtonCalled = false
     
     func showYearLessThanGregorianCalendarYearMessage(message:String) {
         isYearLessThanGregorianCalendarMessageDisplayed = true
@@ -79,5 +88,9 @@ class SpyLeapYearView: LeapYearView {
     
     func showInvalidYearMessage(message: String) {
         isInvalidYearMessageDisplayed = true
+    }
+    
+    func enableSubmitButton() {
+        isEnableSubmitButtonCalled = true
     }
 }

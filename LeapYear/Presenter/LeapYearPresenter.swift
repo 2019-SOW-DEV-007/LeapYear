@@ -13,6 +13,12 @@ class LeapYearPresenter {
         self.leapYearView = leapYearView
     }
     
+    func toggleSubmitButton(year:String) {
+        if year.count > 0 {
+            leapYearView.enableSubmitButton()
+        }
+    }
+    
     func validate(anYear:String?) {
         guard let yearInString = anYear, let year = Int(yearInString) else {
             leapYearView.showInvalidYearMessage(message: INVALID_YEAR_MESSAGE)
@@ -38,4 +44,6 @@ class LeapYearPresenter {
         let character = CharacterSet.init(charactersIn: number)
         return allowedNumber.isSuperset(of: character)
     }
+    
+    
 }
