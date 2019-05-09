@@ -52,6 +52,11 @@ class LeapYearPresenterTests: XCTestCase {
         
         XCTAssertTrue(leapYearPresenter.isValidNumber(number: validNumericCharacter))
     }
+    
+    func test_ReturnFalse_WhenUserEntersAnInvalidNumericCharacter() {
+        let invalidNumericCharacter = "A"
+        XCTAssertFalse(leapYearPresenter.isValidNumber(number:invalidNumericCharacter))
+    }
 }
 
 class SpyLeapYearView: LeapYearView {
