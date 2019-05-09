@@ -47,6 +47,4 @@ class LeapYearPresenter {
         let character = CharacterSet.init(charactersIn: number)
         return allowedNumber.isSuperset(of: character)
     }
-    
-    
 }

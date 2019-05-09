@@ -65,7 +65,7 @@ class LeapYearViewController: UIViewController, UITextFieldDelegate, LeapYearVie
     
     private func clearTextField() {
         self.yearTextField.text = ""
-        leapYearPresenter.toggleSubmitButton(year: self.yearTextField.text ?? "")
+        leapYearPresenter.toggleSubmitButton(year: self.yearTextField.text!)
     }
 }
 
