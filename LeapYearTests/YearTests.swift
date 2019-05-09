@@ -24,6 +24,13 @@ class YearTests: XCTestCase {
         XCTAssertFalse(year.isLeapYear())
     }
     
+    func test_ReturnTrueForLeapYear_WhenAnYearIsDivisibleBy4ButNotBy100() {
+        let anYearDivisibleBy4ButNotBy100 = 2008
+        let year = createAnYear(anYearDivisibleBy4ButNotBy100)
+        
+        XCTAssertTrue(year.isLeapYear())
+    }
+    
     private func createAnYear(_ year: Int) -> Year {
         return Year.init(year)
     }
