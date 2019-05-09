@@ -36,8 +36,8 @@ class LeapYearViewController: UIViewController, UITextFieldDelegate, LeapYearVie
         showAlert(message: leapYear)
     }
     
-    func showNonLeapYearMessage(message: String) {
-        showAlert(message: message)
+    func showNonLeapYearMessage(nonLeapYear: String) {
+        showAlert(message: nonLeapYear)
     }
     
     func showInvalidYearMessage(message: String) {

@@ -91,7 +91,7 @@ class SpyLeapYearView: LeapYearView {
         isLeapYearMessageDisplayed = true
     }
     
-    func showNonLeapYearMessage(message: String) {
+    func showNonLeapYearMessage(nonLeapYear: String) {
         isNonLeapYearMessageDisplayed = true
     }
     
