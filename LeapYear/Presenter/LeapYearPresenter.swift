@@ -35,7 +35,7 @@ class LeapYearPresenter {
         }
         
         if calendarYear.isLeapYear() {
-            leapYearView.showLeapYearMessage(message: "\(year)" + LEAP_YEAR_MESSAGE)
+            leapYearView.showLeapYearMessage(leapYear: "\(year)" + LEAP_YEAR_MESSAGE)
         }
         else {
             leapYearView.showNonLeapYearMessage(message: "\(year)" + NON_LEAP_YEAR_MESSAGE)

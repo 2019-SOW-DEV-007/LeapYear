@@ -32,8 +32,8 @@ class LeapYearViewController: UIViewController, UITextFieldDelegate, LeapYearVie
         showAlert(message: preGregorianCalendarMessage)
     }
     
-    func showLeapYearMessage(message: String) {
-        showAlert(message: message)
+    func showLeapYearMessage(leapYear: String) {
+        showAlert(message: leapYear)
     }
     
     func showNonLeapYearMessage(message: String) {

@@ -87,7 +87,7 @@ class SpyLeapYearView: LeapYearView {
         isYearLessThanGregorianCalendarMessageDisplayed = true
     }
     
-    func showLeapYearMessage(message: String) {
+    func showLeapYearMessage(leapYear: String) {
         isLeapYearMessageDisplayed = true
     }
     
