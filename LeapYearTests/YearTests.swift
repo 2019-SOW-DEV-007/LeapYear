@@ -31,6 +31,13 @@ class YearTests: XCTestCase {
         XCTAssertTrue(year.isLeapYear())
     }
     
+    func test_ReturnFalseForLeapYear_WhenAnYearIsNotDivisibleBy4() {
+        let anYearNotDivisibleBy4 = 2019
+        let year = createAnYear(anYearNotDivisibleBy4)
+        
+        XCTAssertFalse(year.isLeapYear())
+    }
+    
     private func createAnYear(_ year: Int) -> Year {
         return Year.init(year)
     }
