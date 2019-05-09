@@ -83,7 +83,7 @@ class SpyLeapYearView: LeapYearView {
     fileprivate var isEnableSubmitButtonCalled = false
     fileprivate var isDisableSubmitButtonCalled = false
     
-    func showYearLessThanGregorianCalendarYearMessage(message:String) {
+    func showYearLessThanGregorianCalendarYearMessage(preGregorianCalendarMessage:String) {
         isYearLessThanGregorianCalendarMessageDisplayed = true
     }
     

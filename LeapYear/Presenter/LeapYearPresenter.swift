@@ -30,7 +30,7 @@ class LeapYearPresenter {
         let calendarYear = Year.init(year)
         
         guard calendarYear.isYearGreaterThanOrEqualToGregorianCalendarYear() else {
-            leapYearView.showYearLessThanGregorianCalendarYearMessage(message: YEAR_LESS_THAN_GREGORIAN_CALENDAR_YEAR)
+            leapYearView.showYearLessThanGregorianCalendarYearMessage(preGregorianCalendarMessage: YEAR_LESS_THAN_GREGORIAN_CALENDAR_YEAR)
             return
         }
         

@@ -28,8 +28,8 @@ class LeapYearViewController: UIViewController, UITextFieldDelegate, LeapYearVie
     }
     
     //MARK: Leap Year View Protocols
-    func showYearLessThanGregorianCalendarYearMessage(message: String) {
-        showAlert(message: message)
+    func showYearLessThanGregorianCalendarYearMessage(preGregorianCalendarMessage: String) {
+        showAlert(message: preGregorianCalendarMessage)
     }
     
     func showLeapYearMessage(message: String) {
