@@ -48,4 +48,27 @@ class LeapYearUITests: XCTestCase {
         
     }
     
+    func test_AlertIsShownWithYearLessThanGregorianCalendarMessage_WhenUserEntersYearLessThan1582() {
+        XCUIApplication().launch()
+        
+        let app = XCUIApplication()
+        app.textFields["Enter an year"].tap()
+        
+        let key2 = app.keys["1"]
+        key2.tap()
+        
+        let key0 = app.keys["5"]
+        key0.tap()
+        
+        let key1 = app.keys["8"]
+        key1.tap()
+        
+        let key3 = app.keys["0"]
+        key3.tap()
+        
+        app.buttons["Submit"].tap()
+        app.alerts.buttons["OK"].tap()
+        
+    }
+    
 }
