@@ -61,6 +61,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="submitButton" destination="wVD-Ad-uxF" id="QYd-om-31u"/>
                         <outlet property="yearTextField" destination="cFV-r3-EDd" id="1E2-jl-8Et"/>
                     </connections>
                 </viewController>
